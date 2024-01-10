@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="hastadb2ModelStoreContainer" CdmEntityContainer="hastadb2Entities">
+    <EntitySetMapping Name="hastabilgi1">
+      <EntityTypeMapping TypeName="hastadb2Model.hastabilgi1">
+        <MappingFragment StoreEntitySet="hastabilgi1">
+          <ScalarProperty Name="hastano" ColumnName="hastano" />
+          <ScalarProperty Name="hastaad" ColumnName="hastaad" />
+          <ScalarProperty Name="yas" ColumnName="yas" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="hastalik" ColumnName="hastalik" />
+          <ScalarProperty Name="ilac" ColumnName="ilac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

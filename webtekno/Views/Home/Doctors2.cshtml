@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Doctors2";
+}
+@using webtekno.Models.entity3
+@model List<doktorlar>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doktor Bilgi Otomasyonu</title>
+    <link href="~/Content/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Doktor Çalışan Sorgulama</h1>
+    @using (Html.BeginForm("Doctors2", "Home", FormMethod.Get))
+    {
+        <p>
+            Aranacak Doktor Adı: @Html.TextBox("p")
+            <input type="submit" value="ara" />
+        </p>
+    }
+    <h2>Doktor Bilgileri</h2>
+    <table id="patientTable">
+        <tr>
+            <th>Doktor Adı</th>
+            <th>Doktor Branşı</th>
+            <th>Unvanı</th>
+            
+        </tr>
+        <tbody>
+            @foreach (var ktgr in Model)
+            {
+                <tr>
+                    <td>@ktgr.doktorad</td>
+                    <td>@ktgr.doktorbrans</td>
+                    <td>@ktgr.unvan </td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>

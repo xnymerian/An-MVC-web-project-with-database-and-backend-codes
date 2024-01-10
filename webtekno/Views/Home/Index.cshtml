@@ -1,0 +1,51 @@
+﻿@using System.Web.Mvc
+@{
+    ViewBag.Title = "Home";
+}
+
+@using webtekno.Models.Entity
+@using webtekno.Controllers
+
+
+@Model List<hastabilgi1>
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Hasta Bilgi Otomasyonu</title>
+        <link href="~/Content/style.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        
+       
+        <h2>Mevcut Tüm Hasta Bilgileri</h2>
+        <table id="patientTable">
+            <tr>
+                <th>ıd</th>
+                <th>İsim</th>
+                <th>Yaş</th>
+                <th>Cinsiyet</th>
+                <th>Hastalık</th>
+                <th>İlaç</th>
+            </tr>
+            <tbody>
+                @foreach (var ktgr in Model)
+                {
+                    <tr>
+                        <td>@ktgr.hastano</td>
+                        <td>@ktgr.hastaad</td>
+                        <td>@ktgr.yas </td>
+                        <td>@ktgr.cinsiyet</td>
+                        <td>@ktgr.hastalik</td>
+                        <td>@ktgr.ilac</td>
+                        <td> <a href="SIL/@ktgr.hastano" class="btn btn-danger">SİL</a></td>
+                        
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </body>
+</html>

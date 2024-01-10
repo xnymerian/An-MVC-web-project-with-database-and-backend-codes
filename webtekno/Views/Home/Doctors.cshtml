@@ -1,0 +1,40 @@
+﻿@using System.Web.Mvc
+@{
+    ViewBag.Title = "Doctors";
+}
+@model List<webtekno.Models.entity3.doktorlar>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doktor Bilgi Otomasyonu</title>
+    <link href="~/Content/style.css" rel="stylesheet">
+</head>
+<body>
+  
+
+    
+    <h2>Mevcut Tüm Doktor Bilgileri</h2>
+    <table id="patientTable">
+        <tr>
+            <th>Doktor Adı</th>
+            <th>Doktor Branşı</th>
+            <th>Unvanı</th>
+            
+        </tr>
+        <tbody>
+            @foreach (var ktgr in Model)
+            {
+                <tr>
+                    <td>@ktgr.doktorad</td>
+                    <td>@ktgr.doktorbrans</td>
+                    <td>@ktgr.unvan </td>
+                    
+                    <td> <a href="SIL/@ktgr.doktorad" class="btn btn-danger">SİL</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>
